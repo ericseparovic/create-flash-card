@@ -5,27 +5,38 @@ const puppeteer = require("puppeteer");
   const page = await browser.newPage();
 
   //   Lista de palabras para buscar
-  const wordsInsert = ["hello", "arise", "broke"];
+  const wordsInsert = ["hello", "arise", "broke", "dsxs"];
+  const wordsDictionary = [];
 
   for (let i = 0; i < wordsInsert.length; i++) {
     await page.goto("https://www.wordreference.com/");
 
-    // Type into search box.
     await page.type(".ac-input", `${wordsInsert[i]}`);
     await page.click(".submit-button");
+
     await page.waitForSelector(".headerWord");
+    await page.waitForSelector(".even");
+    await page.waitForSelector(".ToWrd");
+
+    console.log(await page.waitForSelector(".ToWrd"));
 
     const wordsAll = await page.evaluate(() => {
-      const words = [];
-      const wordHTML = document.querySelector(".headerWord").innerHTML;
+      const wordHTML = document.querySelector(".headerWord").innerText;
+      const meaning =
+        document.querySelector(".even .ToWrd").firstChild.nodeValue;
+      const example = document.querySelector(".even .FrEx").innerText;
 
-      words.push({
+      return {
         word: wordHTML,
-      });
-      return words;
+        meaning: meaning,
+        example: example,
+      };
     });
-    console.log(wordsAll);
+
+    wordsDictionary.push(wordsAll);
   }
 
-  //   await browser.close();
+  console.log(wordsDictionary);
+
+  // await browser.close();
 })();
