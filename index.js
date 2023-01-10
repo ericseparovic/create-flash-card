@@ -26,11 +26,10 @@ const fs = require("fs");
           document.querySelector(".even .ToWrd").firstChild.nodeValue;
         const example = document.querySelector(".even .FrEx").innerText;
 
-        return `${word};  ${meaning}; ${example} \n`;
+        return `${word}; ${word}; ${meaning}; ${example} \n`;
       });
 
       words += wordsAll;
-      console.log(words);
     }
 
     await browser.close();
