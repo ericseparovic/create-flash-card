@@ -7,12 +7,13 @@ let words = "";
 (async () => {
   const response = await prompts({
     type: "text",
-    name: "words",
+    name: "text",
     message: "Insert words",
   });
 
-  console.log(response.words);
-  //   findWords(response.words);
+  const words = createArrayWords(response.text);
+
+  findWords(words);
 })();
 
 //   Lista de palabras para buscar
@@ -74,4 +75,16 @@ async function getData(page) {
 
     return `${word}; ${meaning}; ${exampleES}; ${exampleUS} \n`;
   });
+}
+
+function createArrayWords(text) {
+  text = text.replaceAll(/\W/g, " ");
+  text = text.replaceAll(/\d/g, " ");
+  const wordsList = text.split(" ");
+  const words = wordsList.filter((word) => {
+    if (word) {
+      return word;
+    }
+  });
+  return words;
 }

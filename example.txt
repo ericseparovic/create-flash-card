@@ -1,0 +1,3 @@
+hello; hola ; ¡Hola! ¿Cómo estás?; Hello.  How are you? 
+my; mi ; ¿Has visto mis llaves?; Have you seen my keys? I'm going to brush my hair. 
+name; nombre ; Mi nombre es Peter Smith.; My name is Peter Smith. 
