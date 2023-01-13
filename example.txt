@@ -1,3 +1,26 @@
-hello; hola ; ¡Hola! ¿Cómo estás?; Hello.  How are you? 
-my; mi ; ¿Has visto mis llaves?; Have you seen my keys? I'm going to brush my hair. 
-name; nombre ; Mi nombre es Peter Smith.; My name is Peter Smith. 
+it; - ; Perdí mi bolígrafo; estaba en mi escritorio.; I've lost my pen; it was on my desk. 
+worked; trabajar; Trabaja en el banco.; He works at the bank. 
+but; pero ; Puede que esté viejo, pero todavía puedo andar en bicicleta.; I may be old, but I can still ride a bike. 
+it; - ; Perdí mi bolígrafo; estaba en mi escritorio.; I've lost my pen; it was on my desk. 
+still; aún ; Él no había desayunado pero aún no tenía hambre.; He hadn't eaten breakfast, but he was still not hungry. 
+stops; detenerse; El guardia les ordenó que se detuvieran.; The guard ordered them to stop. 
+execution; ejecución ; La ejecución del asesino tendrá lugar a finales de mes.; The murderer's execution is due to take place at the end of the month. 
+when; cuándo ; ¿Cuándo salió del trabajo? ¿A las tres?; When did she leave work?  At three o'clock? 
+that; eso, ese, esa ; ¿Te gusta eso?; Do you like that?  That's not what I meant. 
+timeout; expirar; Si pierdo mucho tiempo, el sitio web expirará.; If I fool around too long, that website will time out. 
+is; es ; Ella es un genio.; She is a genius. 
+done; hecho ; Había hecho lo que tenía que hacer.; He had done what he needed to do. 
+how; cómo ; ¿Viste cómo me miraba?; Did you see how he looked at me? 
+can; poder; Puedo llevarte esas maletas.; I can carry those suitcases for you. 
+I; - ; Te quiero.; I love you. 
+continue; continuar; Continuó su labor sin salir ni a comer.; He continued his work without stopping for lunch. 
+to; a ; Él fue a la tienda.; He went to the shop.  He went out to dinner. 
+execute; ejecutar a ; El estado ejecutó al asesino convicto.; The state executed the convicted murderer. 
+the; el ; El niño fue a dar un paseo.; The boy went for a walk. 
+remaining; restante ; Los artículos restantes se metieron en cajas y se donaron.; The remaining items were boxed up and donated to charity. 
+code; código ; <span class="tooltip"><b>ⓘ</b><span>Esta oración no es una traducción de la original.</span></span> Para desbloquear el teléfono, hay que escribir un código de cuatro dígitos.; What is the code to open the safe? 
+even; aún ; Me siento aún peor de lo que parece.; I feel even worse than I look. 
+though; sin embargo ; Creí que iba a ser más fácil encontrar un trabajo. Sin embargo, me equivoqué.; I thought it would be easy to find a job; I was wrong, though. 
+the; el ; El niño fue a dar un paseo.; The boy went for a walk. 
+timeout; expirar; Si pierdo mucho tiempo, el sitio web expirará.; If I fool around too long, that website will time out. 
+occurs; ocurrir; Este problema solo ha ocurrido una vez.; This problem has only occurred once. 

@@ -5,13 +5,9 @@ let words = "";
 
 //Input of words
 (async () => {
-  const response = await prompts({
-    type: "text",
-    name: "text",
-    message: "Insert words",
-  });
-
-  const words = createArrayWords(response.text);
+  const words = createArrayWords(
+    "it worked, but it still stops execution when that timeout is done. how can I continue to execute the remaining code even though the timeout occurs"
+  );
 
   findWords(words);
 })();
@@ -29,12 +25,16 @@ async function findWords(wordsInput) {
       await page.type(".ac-input", `${wordsInput[i]}`);
       await page.click(".submit-button");
 
-      await page.waitForSelector(".headerWord");
-      await page.waitForSelector(".even");
+      try {
+        await page.waitForSelector(".headerWord", { timeout: 1000 });
+        await page.waitForSelector(".even", { timeout: 1000 });
 
-      const wordsAll = await getData(page);
+        const wordsAll = await getData(page);
+        words += wordsAll;
+      } catch (e) {
+        console.log(e, wordsInput);
+      }
 
-      words += wordsAll;
       console.log(words);
     }
 
@@ -69,6 +69,7 @@ function createTxt(words) {
 async function getData(page) {
   return await page.evaluate(() => {
     const word = document.querySelector(".headerWord").innerText;
+    console.log(word);
     const meaning = document.querySelector(".even .ToWrd").firstChild.data;
     const exampleES = document.querySelector(".even .ToEx span i").innerHTML;
     const exampleUS = document.querySelector(".even .FrEx span").innerHTML;
