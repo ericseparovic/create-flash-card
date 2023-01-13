@@ -5,10 +5,9 @@ let words = "";
 
 //Input of words
 (async () => {
-  const words = createArrayWords(
-    "it worked, but it still stops execution when that timeout is done. how can I continue to execute the remaining code even though the timeout occurs"
-  );
+  let words = createArrayWords("think");
 
+  words = filterWithoutRepetition(words);
   findWords(words);
 })();
 
@@ -38,7 +37,7 @@ async function findWords(wordsInput) {
       console.log(words);
     }
 
-    // await browser.close();
+    await browser.close();
   } catch (err) {
     console.log(err);
   }
@@ -46,6 +45,7 @@ async function findWords(wordsInput) {
   createTxt(words);
 }
 
+//Create txt with words
 function createTxt(words) {
   let promiseWriteFile = new Promise((resolve, reject) => {
     fs.writeFile("example.txt", words, (error) => {
@@ -73,8 +73,9 @@ async function getData(page) {
     const meaning = document.querySelector(".even .ToWrd").firstChild.data;
     const exampleES = document.querySelector(".even .ToEx span i").innerHTML;
     const exampleUS = document.querySelector(".even .FrEx span").innerHTML;
+    const audio = word;
 
-    return `${word}; ${meaning}; ${exampleES}; ${exampleUS} \n`;
+    return `${audio}; ${word}; ${meaning}; ${exampleES}; ${exampleUS} \n`;
   });
 }
 
@@ -88,4 +89,13 @@ function createArrayWords(text) {
     }
   });
   return words;
+}
+
+//Create new array without repetitions
+function filterWithoutRepetition(words) {
+  return words.filter((word, index) => {
+    if (words.indexOf(word) === index) {
+      return word;
+    }
+  });
 }
